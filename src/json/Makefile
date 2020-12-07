@@ -7,7 +7,8 @@ FILE_LIST_C +=\
 
 
 FILE_LIST_CPP +=\
-main.cpp\
+jsonFunction.cpp\
+
 
 FILE_LIST_CPP +=\
 

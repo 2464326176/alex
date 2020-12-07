@@ -9,7 +9,7 @@ FILE_LIST_C +=\
 
 
 FILE_LIST_CPP +=\
-
+main.cpp\
 
 FILE_LIST_S +=\
 

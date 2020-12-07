@@ -1,7 +1,5 @@
-# 设置当前路径
 DIR_ROOT:=.
 
-# 设置递归子目录
 DIR_LIST_SUB :=src
 
 
