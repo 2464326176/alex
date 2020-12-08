@@ -27,7 +27,7 @@ Json::Value readFile(std::string JsonFileName)
     return root;
 }
 
-Json::Value readString(std::string StringName)
+Json::Value readString(std::string JsonStringName)
 {
 
     const std::string rawJson = R"({"Age": 20, "Name": "colin"})";
