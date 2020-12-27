@@ -1,8 +1,5 @@
-#include <iostream>
-#include <cstdlib>
-#include <pthread.h>
-
-
+#include <string.h>
+#include <cstring>
 #define NAME_LINE   40
  
 
@@ -31,7 +28,6 @@ typedef struct __THD_DATA
 }THD_DATA;
  
  
- //基本类型数据转换成字符串
 template<class T>
 std::string convertToString(const T val)
 {
@@ -42,5 +38,4 @@ std::string convertToString(const T val)
     return s;
 }
  
-//售票程序
-int SaleTicket(LPVOID lpParameter);
+int SaleTicket(void* lpParameter);

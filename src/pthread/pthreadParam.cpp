@@ -32,14 +32,18 @@ int main ()
  
    for( i=0; i < NUM_THREADS; i++ ){
       cout <<"main() : creating thread, " << i << endl;
+
       td[i].thread_id = i;
       td[i].message = (char*)"This is message";
+      
       rc = pthread_create(&threads[i], NULL,
                           PrintHello, (void *)&td[i]);
+
       if (rc){
          cout << "Error:unable to create thread," << rc << endl;
          exit(-1);
       }
+
    }
    pthread_exit(NULL);
 }
