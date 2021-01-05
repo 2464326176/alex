@@ -1,7 +1,8 @@
 DIR_ROOT:=..
 
 DIR_LIST_SUB :=\
-exif\
+opencv\
+
 
 
 

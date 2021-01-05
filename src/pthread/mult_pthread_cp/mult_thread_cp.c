@@ -106,6 +106,8 @@ int main(int argc, char *argv[])
 	if(tid == NULL)
 		err_sys("fail to malloc");
     //int done[n]  每个线程完成任务字节数
+
+
 	done = (int *)calloc(sizeof(int), n);
 	if(done == NULL)
 		err_sys("fail to malloc");
