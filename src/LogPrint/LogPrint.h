@@ -23,7 +23,8 @@ void LogInfo(const char * format, ...);
 char* LogToString(LOGLEVEL level);
 
 
-
+void writeFile(const     char* fileName, const char* data);
+void readFile();
 
 
 

@@ -2,10 +2,6 @@
 #include <stdarg.h>
 
 
-
-
-
-
 void LogInfo(const char * format, ...){
     char TmpBuf[MAXBUFSIZE];
     char formatBuf[MIDBUFSIZE];
@@ -13,12 +9,11 @@ void LogInfo(const char * format, ...){
     va_start(aptr, format);
     vsprintf(formatBuf, format, aptr);
     sprintf(TmpBuf, "%s,  %s", LOG_DEBUG, formatBuf);
-    printf("%s\n", TmpBuf);
+    writeFile("./1.txt", TmpBuf);
     va_end(aptr);
 }
 
 char* LogToString(LOGLEVEL level){
-
     switch(level){
         case Debug:
             return LOG_NONE; break;
@@ -31,4 +26,12 @@ char* LogToString(LOGLEVEL level){
     }
 
 }
+
+void writeFile(const     char* fileName, const char* data){
+    FILE *fp = NULL;
+    fp = fopen(fileName, "w+");
+    fprintf(fp, "%s", data);
+    fclose(fp);
+}
+
 
